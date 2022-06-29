@@ -1,0 +1,61 @@
+/* Fonts */
+/* font-family: 'Inter', sans-serif; */
+/* font-family: 'Ubuntu', sans-serif; */
+/* font-family: 'Lexend Deca', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+.logo {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 3rem;
+    
+}
+
+.tilt {
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    /* transform: skew(25deg); */
+    transform: scale(1.25);
+    /* transform: translateX(-95% );
+    transform: translateY(20%); */
+    color: red;
+}
+
+.header {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    height: 60px;
+    padding: 1em;
+    background-color: burlywood;
+}
+.header ul {
+    list-style: none;
+    margin-left: 1em;
+}
+.header a {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 2em;
+}
+
+
+/* Layout */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header ul {
+    display: flex;
+
+
+}
