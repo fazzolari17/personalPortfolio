@@ -79,6 +79,34 @@ section.hero {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.carousel {
+    width: 100%; 
+    height: 500px;
+    background-color: var(--header-background, #071013);
+}
+
+.carousel-item {
+    width: 500px;
+    height: 350px;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.carousel-item p {
+    color: var(--header-text, #F0F8FF);
+}
+
+.carousel-item a {
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+
 
 /* Layout */
 
@@ -98,5 +126,11 @@ section.hero {
     display:flex;
     flex-direction: column;
     align-items: center;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 

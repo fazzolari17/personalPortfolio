@@ -1,0 +1,154 @@
+/* Global Values   */
+/* Style Sheet for Tribute 3.0 */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Lato', sans-serif;
+  background: #eee;
+  width:100%;
+}
+
+.header-container {
+  padding: 50px;
+  margin-bottom: 30px;
+  line-height: 50px;
+}
+
+img {
+  width: 90%;
+  min-width: 300px;
+  display: flex;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  padding-bottom: 0px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 10px -5px 5px darkgray;
+}
+
+.line {
+  border: 2px solid black;
+  margin: auto;
+  min-width: 200px;
+  width: 15%;
+  box-shadow: 10px -5px 5px darkgray;
+}
+
+figcaption {
+  max-width: 90%;
+  min-width: 300px;
+  background-color: white;
+  text-align: center;
+  margin:auto;
+  line-height: 20px;
+  border-radius: 0 0 10px 10px;
+  padding: 0 50px;
+  box-shadow: 10px -5px 5px  darkgray;
+  z-index: 1;
+}
+
+h2 {
+  padding: 30px;
+  border-radius: 10px;
+  width: 50%;
+  margin: 10px auto;
+  min-width: 250px;
+}
+
+.bullet-info {
+  width: 70%;
+  background: darkgray;
+  margin: 20px auto 30px auto;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 10px 5px 5px 10px darkgray;
+}
+
+ul {
+  text-align: left;
+  max-width: 70%;
+  min-width: 200px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+li {
+  text-align: left;
+  padding: 10px;
+}
+
+.additional-reading {
+  display: block;
+  width: 60%;
+  margin: auto;
+}
+
+.quotes {
+  max-width: 60%;
+  min-width: 200px;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px darkgray;
+}
+
+
+
+footer {
+  width: 80%;
+  min-width: 300px;
+  margin: auto;
+  margin-top: 10px;
+  background: darkgray;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+.fl-left {
+  float: left;
+
+}
+.fl-right {
+  float: right;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+
+@media (max-width: 320px) {
+
+  img, figcaption, .quotes {
+    min-width: 100%;
+  }
+  footer {
+    width: 100%;
+  }
+}
