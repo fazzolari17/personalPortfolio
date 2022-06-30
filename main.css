@@ -9,6 +9,13 @@
     box-sizing: border-box;
 }
 
+:root.light {
+    --header-background: #071013;
+    --header-contrastColor: #75ABBC;
+    --hero-background: #395E66;
+    --header-text: #F0F8FF;
+}
+
 /* Typography */
 .logo {
     font-family: 'Lexend Deca', sans-serif;
@@ -21,11 +28,8 @@
     position: absolute;
     top: 25px;
     left: 40px;
-    /* transform: skew(25deg); */
     transform: scale(1.25);
-    /* transform: translateX(-95% );
-    transform: translateY(20%); */
-    color: red;
+    color: var(--header-constrastColor, #75ABBC);
 }
 
 .header {
@@ -33,16 +37,46 @@
     font-weight: 500;
     height: 60px;
     padding: 1em;
-    background-color: burlywood;
+    background-color: var(--header-background, #071013);
+    color: #F0F8FF;
 }
+
 .header ul {
     list-style: none;
     margin-left: 1em;
 }
+
 .header a {
     text-decoration: none;
     text-transform: uppercase;
     margin-left: 2em;
+    color: var(--heaader-text, #F0F8FF);
+}
+
+section.hero {
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 300px;
+    background-color: var(--hero-background, #395E66);
+    border-radius: 5px;
+    -webkit-box-shadow: -1px 0px 38px 8px rgba(0,0,0,0.51);
+    -moz-box-shadow: -1px 0px 38px 8px rgba(0,0,0,0.51);
+    box-shadow: -1px 0px 38px 8px rgba(0,0,0,0.51);
+}
+
+.hero img {
+    border-radius: 5px;
+}
+
+.hero h1 {
+    margin-top: 1rem;
+    color: var(--header-text, #F0F8FF);
+}
+
+.hero > p {
+    color: #C1AE7C;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 
@@ -56,6 +90,13 @@
 
 .header ul {
     display: flex;
-
-
 }
+
+
+
+section.hero {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
