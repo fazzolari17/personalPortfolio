@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="main.css" media="screen"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="author" content="Giuseppe Fazzolari"> <!-- 05/30/2022-->
+    <title>FCC:Techinical Document 2.0</title>
+  </head>
+  <body>
+    <div id="main-doc" class="container">
+
+    <div class="show " id="theme-container">
+        <span id="theme-icon" class="material-symbols-outlined small-screen">dark_mode</span>
+    </div>
+
+    <header id="navbar-header" class="font-md">
+        <nav id="navbar">
+        <h1><span class="first-letter">J</span>ava<span class="first-letter">S</span>cript</h1>
+        <ul class="font-md">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#what-is-javascript">What is JavaScript</a></li>
+          <li><a href="#javascript-and-java">Javascript and Java</a></li>
+          <li><a href="#hello-world">Hello World</a></li>
+          <li><a href="#variables">Variables</a></li>
+          <li><a href="#declaring-variables">Declaring Variables</a></li>
+          <li><a href="#variable-scope">Variable Scope</a></li>
+          <li><a href="#global-variables">Global variables</a></li>
+          <li><a href="#constants">Constants</a></li>
+          <li><a href="#data-types">Data types</a></li>
+          <li><a href="#if...else">if...else statement</a></li>
+          <li><a href="#while-statement">while statement</a></li>
+          <li><a href="#function-declarations">Function declarations</a></li>
+          <li><a href="#methods">Methods</a></li>
+          <li><a href="#reference">Reference</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+               <!-- The Code Below is to move the theme switcher when the views are changed-->
+        <div class="hidden" id="theme-container2">
+            <span id="theme-icon2" class="material-symbols-outlined small-screen">dark_mode</span>
+        </div>
+
+        <section class="main-section" id="introduction">
+            <h2>Introduction</h2>
+            <p><span class=bold-txt>JavaScript (JS)</span> is a lightweight, interpreted, or <a href="https://en.wikipedia.org/wiki/Just-in-time_compilation">just-in-time</a> compiled programming language with<a href="https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function"> first-class functions</a>. While it is most well-known as the scripting language for Web pages, <a href="https://en.wikipedia.org/wiki/JavaScript#Other_usage"> many non-browser environments</a> also use it, such as <a href="https://couchdb.apache.org/">Node.js, Apache CouchDB</a> and <a href="https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/"> Adobe Acrobat</a>. JavaScript is a <a href="https://developer.mozilla.org/en-US/docs/Glossary/Prototype-based_programming">prototype-based</a>, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript"> JavaScript</a>.</p>
+            <p>This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM.</p>
+            <ul>
+                <li>The standards for JavaScript are the ECMAScript Language Specification (ECMA-262) and the ECMAScript Internationalization API specification (ECMA-402).</li>
+                <li>And in cases where some proposals for new ECMAScript features have already been implemented in browsers, documentation and examples in MDN articles may use some of those new features.</li>
+                <li>The JavaScript documentation throughout MDN is based on the latest draft versions of ECMA-262 and ECMA-402. </li>
+            </ul>
+            <p>Do not confuse JavaScript with the <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java programming language</a>. Both "Java" and "JavaScript" are trademarks or registered trademarks of Oracle in the U.S. and other countries. However, the two programming languages have very different syntax, semantics, and use.</p>
+            <a class="return-to-top" href="#navbar-header">return to top</a>
+        </section>
+
+        <section class="main-section" id="what-is-javascript">
+            <h2>What is JavaScript</h2>
+            <p>JavaScript is a powerful programming language that can add interactivity to a website. It was invented by Brendan Eich (co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation).</p>
+            <p>JavaScript is versatile and beginner-friendly. With more experience, you'll be able to create games, animated 2D and 3D graphics, comprehensive database-driven apps, and much more!</p>
+            <p>JavaScript itself is relatively compact, yet very flexible. Developers have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:</p>
+            <ul>
+                <li>Browser Application Programming Interfaces (APIs) built into web browsers, providing functionality such as dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's webcam, or generating 3D graphics and audio samples.</li>
+                <li>Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as Twitter or Facebook.</li>
+                <li>Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.</li>
+            </ul>
+            <p>It's outside the scope of this article—as a light introduction to JavaScript—to present the details of how the core JavaScript language is different from the tools listed above. You can learn more in MDN's <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">JavaScript learning area</a>, as well as in other parts of MDN.</p>
+            <a class="return-to-top" href="#navbar-header">return to top</a>
+        </section>
+
+        <section class="main-section" id="javascript-and-java">
+            <h2>JavaScript and Java</h2>
+            <p>The JavaScript programming language, developed by Netscape, Inc., is not part of the Java platform.</p>
+            <p>JavaScript does not create applets or stand-alone applications. In its most common form, JavaScript resides inside HTML documents, and can provide levels of interactivity to web pages that are not achievable with simple HTML.</p>
+            <p>Key differences between Java and JavaScript:</p>
+            <ul>
+                <li>Java is an OOP programming language while Java Script is an OOP scripting language.</li>
+                <li>Java creates applications that run in a virtual machine or browser while JavaScript code is run on a browser only.</li>
+                <li>Java code needs to be compiled while JavaScript code are all in text.</li>
+            </ul>
+            <p>For additional information about JavaScript, visit <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript">Mozilla.org</a></p>
+        </section>
+
+        <section class="main-section" id="hello-world">
+            <h2>Hello World</h2>
+            <p>JavaScript is one of the most popular modern web technologies! As your JavaScript skills grow, your websites will enter a new dimension of power and creativity.</p>
+            <p>However, getting comfortable with JavaScript is more challenging than getting comfortable with HTML and CSS. You may have to start small, and progress gradually. To begin, let's examine how to add JavaScript to your page for creating a Hello world! example. (Hello world! is <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">the standard for introductory programming examples</a>.)</p>
+            <code>console.log("Hello World!")<br>document.write("Hello World!")</code>
+            <a class="return-to-top" href="#">return to top</a>
+        </section>
+
+        <section class="main-section" id="variables">
+            <h2>Variables</h2>
+            <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
+            A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9).
+            Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).
+            You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers.</p>
+            <h3>Acceptable Variable Names</h3>
+            <ul>
+                <li>shouldUseCamelCase</li>
+                <li>_canStartWithAnUnderscore</li>
+                <li>$canStartWithADollarSign</li>
+                <li>canHaveNumbers1</li>
+                <li>cantStartWithANumber2</li>
+            </ul>
+            <a class="return-to-top" href="#">return to top</a>
+        </section>
+    
+        <section class="main-section" id="declaring-variables">
+            <h2>Declaring Variables</h2>
+            <p>You can declare a variable in three ways:</p>
+            <p class="margin-btm-0">With the keyword var. For example,</p>
+            <code>var x = 42</code>
+            <p class="margin-top-0">This syntax can be used to declare both local and global variables.</p>
+            <p class="margin-btm-0">With the keyword let For example,</p>
+            <code>let y = 36</code>
+            <p class="margin-top-0">This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
+            <p class="margin-btm-0">With the keyword const For example,</p>
+            <code>const welcomeMessage = "Hello World!"</code>
+            <p class="margin-top-0">This syntax can be used to declare a block scope local variable. const are meant to be "constant" </p>
+            <a class="return-to-top" href="#">return to top</a>
+        </section>
+
+        <section class="main-section" id="variable-scope">
+            <h2>Variable Scope</h2>
+            <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+            <p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
+            <code>if (true) { var x = 5; } console.log(x); // 5</code>
+            <p class="margin-btm-0">This behavior changes, when using the let declaration introduced in ECMAScript 201</p>
+            <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not defined</code>
+            <a class="return-to-top" href="#">return to top</a>
+        </section>
+
+        <section class="main-section" id="global-variables">
+            <h2>Global Variables</h2>
+            <p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
+            <p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
+            <a class="return-to-top" href="#">return to top</a>
+        </section>
+
+        <section class="main-section" id="constants">
+            <h2>Constants</h2>
+            <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
+            <code>const PI = 3.14;</code>
+            <p>A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</p>
+            <p>The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.</p>
+            <p class="margin-btm-0">You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
+            <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; <br>// THIS WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;<br> //statements }</code>
+            <p class="margin-btm-0">However, object attributes are not protected, so the following statement is executed without problems.</p>
+            <code>const MY_OBJECT = {"key": "value"};<br> MY_OBJECT.key = "otherValue";</code>
+            <a class="return-to-top" href="#">return to top</a>
+        </section>
+
+        <section class="main-section" id="data-types">
+            <h2>Data Types</h2>
+            <p>The latest ECMAScript standard defines seven data types:</p>
+            <ul>
+                <li>Six data types that are primitives:</li>
+                <ul>
+                    <li>Boolean. true and false.</li>
+                    <li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+                    <li>undefined. A top-level property whose value is undefined.</li>
+                    <li>Number. 42 or 3.14159</li>
+                    <li>String. "Hello World!"</li>
+                    <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
+                </ul>
+                <li>Object</li>
+            </ul>
+            <p>Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform.</p>
+            <a class="return-to-top" href="#">return to top</a>
+        </section>
+
+        <section class="main-section" id="if...else">
+            <h2>if...else Statement</h2>
+            <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:</p>
+            <code>if (condition) { statement_1; } else { statement_2; }</code>
+            <p>condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.</p>
+            <p class="margin-btm-0">You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:</p>
+            <code>if (condition_1) { statement_1; <br>} else if (condition_2) { statement_2; <br>} else if (condition_n) { statement_n; <br>} else { statement_last; }</code>
+            <p class="margin-btm-0">In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if statements:</p>
+            <code>if (x = y) { /* statements here */ }</code>
+            <p class="margin-btm-0">If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:</p>
+            <code>if ((x = y)) { /* statements here */ }</code>
+            <a class="return-to-top" href="#">return to top</a>
+        </section>
+
+        <section class="main-section" id="while-statement">
+            <h2>while Statement</h2>
+            <p class="margin-btm-0">A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:</p>
+            <code>while (condition) statement</code>
+            <p class="margin-top-0">If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.</p>
+            <p>The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested again. If the condition returns false, execution stops and control is passed to the statement following while.</p>
+            <p>To execute multiple statements, use a block statement ({ ... }) to group those statements</p>
+            <p class="margin-btm-0">The following while loop iterates as long as n is less than three:</p>
+            <code>var n = 0; var x = 0; while (n < 3) { n++; x += n; }</code>
+            <p class="margin-top-0">With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:</p>
+            <ul>
+                <li>After the first pass: n = 1 and x = 1</li>
+                <li>After the second pass: n = 2 and x = 3</li>
+                <li>After the third pass: n = 3 and x = 6</li>
+            </ul>
+            <p>After completing the third pass, the condition n < 3 is no longer true, so the loop terminates.</p>
+            <a class="return-to-top" href="#">return to top</a>
+        </section>
+
+        <section class="main-section" id="function-declarations">
+            <h2>Function Declarations</h2>
+            <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
+            <ul>
+                <li>The name of the function.</li>
+                <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+                <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+            </ul>
+            <p class="margin-btm-0">For example, the following code defines a simple function named square:</p>
+            <code>function square(number) { return number * number; }</code>
+            <p class="margin-btm-0">The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.</p>
+            <code>return number * number;</code>
+            <p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
+            <a class="return-to-top" href="#">return to top</a>
+        </section>
+
+        <section class="main-section" id="methods">
+            <article>
+                <h2>Methods</h2>
+                <p>Below are some common JavaScript methods:</p>
+                <ul>
+                    <li>.subString()</li>
+                    <li>.length</li>
+                    <li>.toString()</li>
+                    <li>.parseInt()</li>
+                    <li>.filter()</li>
+                    <li>.find()</li>
+                    <li>.map()</li>
+                    <li>.includes()</li>
+                    <li>.join()</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Array.filter() vs Array.find()</h3>
+                <p>This will bring us to the next section, which is .filter() vs .find(). What are the differences?</p>
+                <p>.filter() vs .find()<br>
+                    So, what is the difference between .filter() and .find()?</p>
+                <p>The difference has to do with the return type of these 2 methods:</p>
+                <p>The .filter() method always returns an array.
+                    The .find() method returns the first array item that matches the callback function or undefined.</p>
+                <p class="margin-btm-0">Let's take a look at a few examples:</p>
+                <code>let numbers = [9, 5, 14, 3, 11];</code>
+                <p class="margin-btm-0">.filter() ALWAYS returns an array</p>
+                <code >numbers.filter(function(number) {<br>
+                    return number >= 12;<br>
+                }); // [14]</code>
+                <p class="margin-btm-0">.find() returns the first match or undefined</p>
+                <code>numbers.find(function(number) {<br>
+                    return number >= 12;<br>
+                }); // 14</code>
+                <p>Notice how the .filter() is returning an array, even if there's only 1 item that matches your condition. In contrast, the .find() method will return the first item that matches the condition.</p>
+                <p>.filter() always returns an array. Even if it matched one item or no items.</p>
+                <p class="margin-btm-0">Now let's take a look at an example where no items satisfy the condition:</p>
+                <code>let numbers = [9, 5, 14, 3, 11];</code>
+                <p class="margin-btm-0">filter() ALWAYS returns an array (even if it's empty)</p>
+                <code>numbers.filter(function(number) {<br>
+                    return number >= 15;<br>
+                }); // []</code>
+                <p class="margin-btm-0">.find() returns the first match or undefined (when none of the items satisfy the condition)</p>
+                <code>numbers.find(function(number) {<br>
+                    return number >= 15;<br>
+                }); // undefined</code>
+                <p>Notice how the .filter() returned an empty array and the .find() returned undefined.</p>
+                <p>.find(callback) can return undefined. You may have to wrap its result in an if condition to avoid unexpected errors if you end up calling a method on its result.</p>
+                <p>Recap The .find() method returns the first item which matches the condition that you specify. If no items were found, you will get back undefined.
+                    The .filter() method always returns an array. Even if it's empty.</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Array.find() on MDN</a>
+                <a class="return-to-top" href="#">return to top</a>
+            </article>
+            <article>
+                <h3>Array.find()</h3>
+                <p class="margin-btm-0">Let's start with an example, this time with an array of strings:</p>
+                <code>let names = ["Sam", "Alex", "Charlie"]; <br>
+                let result = names.find(function(name) { <br>
+                    &emsp; return name === "Alex"; <br>
+                }); <br>
+                console.log(result); // "Alex"</code>
+                <p>When you call the .find(callback) method on an array, you will get back the first item that matches the condition that you specify. If no items were found, you will get back undefined.</p>
+                <p>The condition that we specified here is that the name should be equal to "Alex".So the .find(callback) method will call the callback that you provided for every item in the array until one of the callbacks returns true. When this happens, it will stop calling the remaining callbacks and return to you the item for which the callback returned true.</p>
+                <p class="margin-btm-0">In our example above, here's the callback:</p>
+                <code>function(name) { <br> &emsp;return name === "Alex"; <br>}</code>
+                <p>which gets called for name = "Sam" (first item of the array). However, the callback will return false because name === "Alex" returns false. So the callback will be called again with the next value of name. This time, name = "Alex". The callback will return true because name === "Alex" (the condition inside the callback) returns true. So the .find() method stops and returns to you that item which is "Alex".</p>
+                <p class="margin-btm-0">Let's take another example but this time with an array of numbers:</p>
+                <code>let numbers = [9, 5, 14, 3, 11];<br>
+                let firstNumberAboveTen = numbers.find(function(number) { <br>
+                &emsp;    return number > 10; <br>
+                }); <br>
+                console.log(firstNumberAboveTen); // 14</code>
+                <p>Notice how even though there are 2 numbers that satisfy the condition, the .find() method stops at the first one that satisfies the condition.</p>
+                
+                <h3>Array map()</h3>
+                <p>The .map(callback) method allows you to transform an array into another one. Here are some common examples:</p>
+                <p>[4, 2, 5, 8] transformed to [8, 4, 10, 16]. We doubled every item in the original array.
+                    ["sam", "Alex"] transformed to ["SAM", "ALEX"]. We upper cased every item in the original array.
+                    Notice that you always get back an array containing the same number of items compared to the original array, but every item has most likely undergone some transformation.</p>
+                <p>In the first example, the transformation is that we multiply every number by 2.
+                    In the second example, the transformation is that we call .toUpperCase() on every item.</p>
+                <p class="margin-btm-0">Let's take a look at how we can implement these transformations:</p>
+                <code>const numbers = [4, 2, 5, 8];<br>
+                    const doubled = numbers.map(function(number) {<br>
+                    &emsp;    return number * 2;<br>
+                    });<br>
+                    console.log(doubled); // [8, 4, 10, 16]</code>
+                <p>and</p>
+                <code>const names = ["sam", "Alex"]; <br>
+                    const upperNames = names.map(function(name) {<br>
+                    &emsp;    return name.toUpperCase();<br>
+                    });</code>
+                <p>If you forget the return inside the callback function, you will end up with the following array: [undefined, undefined]. That's because, for every item in the original array (["sam", "Alex"]), you're returning undefined so the end result will be [undefined, undefined].</p>
+                <p>Once you make this mistake a few times, it becomes a clear signal that you've forgotten the return keyword.</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Array.map() on MDN</a>          
+                <h3>Array.inclued()</h3>
+                <p class="margin-bt,-0">The array .includes(item) method is one of the simplest array methods as it takes an item rather than a callback and returns true when that item exists in the array and false otherwise. Here's an example:</p>
+                <code>const groceries = ["Apple", "Peach", "Tomato"];<br>
+                    groceries.includes("Tomato"); // true<br>
+                    groceries.includes("Bread"); // false</code>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">Array.includes()</a>
+                <h3>Array join(glue)</h3>
+                <p>When you have an array and you render this array to a web page (as we'll see later on in the DOM section of the course), the array will be automatically converted to a string. JavaScript will automatically invoke the .toString() method of the array which returns a string of the array elements separated by commas. Here's how it works:</p>
+                <code>const groceries = ["Apple", "Peach", "Tomato"];<br>
+                    groceries.toString(); // "Apple,Peach,Tomato"</code>
+                <p>But there's a downside, which is that you cannot customize the glue that gets inserted in between the array items, which is the comma , character.</p>
+                <p class="margin-btm-0">If you'd like to customize the glue, then you can use the .join(glue) method:</p>
+                <code>const groceries = ["Apple", "Peach", "Tomato"];<br>
+                    groceries.join("; "); // "Apple; Peach; Tomato"<br>
+                    groceries.join(" . "); // "Apple . Peach . Tomato"</code>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Array.join()</a>
+                <a class="return-to-top" href="#">return to top</a>
+            </article>
+        </section>
+
+        <section class="main-section" id="reference">
+            <h2>Reference</h2>
+            <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN</a></p>
+            <a class="return-to-top" href="#">return to top</a>
+        </section>
+        <!-- <section>
+            <ul>
+                Math
+                <li>min()</li>
+                <li>max()</li>
+                <li>round()</li>
+             </ul> 
+        </section> -->
+        </section>
+    </main>
+    <script src="index.js"></script>
+        </div>
+    </body>
+</html>

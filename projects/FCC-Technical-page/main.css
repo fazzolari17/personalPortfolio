@@ -1,0 +1,181 @@
+html,
+body, 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: var(--main-background, #FFF);
+    color: var(--main-color, #202020);
+}
+
+/* Theme Changer */
+
+:root.light {
+    --main-background: #FFF;
+    --main-color: #202020;
+    --code-background-color: #F7F7F7;
+    --border: grey;
+}
+
+:root.dark {
+    --main-background: #202020;
+    --main-color: #FFF;
+    --code-background-color: #454443;
+    --border: grey;
+}
+
+#theme-icon:hover, 
+#theme-icon:focus {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+#theme-icon, 
+#theme-container, 
+.icon {
+    cursor: pointer;
+    z-index: 100;
+}
+
+.small-screen {
+    float: right;
+    position: relative;
+    top: 10px;
+    right: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* Typography */
+.container {
+    margin: 0 auto;
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul {
+    margin: 0 auto; 
+    border-bottom: 4px solid var(--border, grey);
+    overflow: scroll;
+    max-height: 30vh;    
+}
+
+nav li {
+    padding: .5em 0;
+    border-top: 2px solid var(--border, grey);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--main-color,#202020);
+}
+
+h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding: .5em 0;
+} 
+
+h2 {
+    margin: 1em 0;
+    text-transform: capitalize;
+}
+
+h3 {
+    margin-top: 1em;
+}
+
+p {
+    font-size: 1em;
+    margin: 2em 0;
+}
+
+main {
+    padding: 2em 1.5em;
+}
+
+main ul {
+    margin: .5em 0 .5em 4em;
+}
+
+main li {
+    margin: .75em 0;
+}
+
+code {
+    display: block;
+    padding: 2em 1em;
+    font-size: .9rem;
+    font-weight: 200;
+    border-radius: .5rem;
+    color: var(--main-color, #202020);
+    background-color: var(--code-background-color, #F7F7F7);
+}
+
+.return-to-top {
+    display: block;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.margin-btm-0 {
+    margin-bottom: 0.25em;
+}
+
+.margin-top-0{
+    margin-top: 0.25em;
+} 
+
+
+@media screen and (min-width: 850px) {
+    /* Typography */
+    
+    h1 {
+        font-size: 1.8rem;
+    } 
+
+    code {
+        font-size: 1rem;
+    }
+
+    /* Layout */
+    
+    .container {
+        display: flex;
+        max-width: 100%;
+    }
+
+    header {
+        min-width: 300px;
+        border-right: 2px solid var(--border, grey);
+        position: fixed;
+        height: 100vh;
+    }
+
+    nav ul { 
+        min-height: 100vh;
+        border: none;
+    }
+
+    main {
+        position: absolute;
+        left: 300px;
+        
+    } 
+    #theme-icon {
+        z-index: -10;
+     }
+
+    
+} 
