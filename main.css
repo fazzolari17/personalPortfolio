@@ -163,7 +163,6 @@ section.hero {
 }
 
 /* Layout */
-
 .projects-page {
     padding: 2rem;
     display: grid;
@@ -177,6 +176,22 @@ section.hero {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+}
+
+@media (max-width: 1025px ) {
+    .projects-page {
+        padding: 2rem;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .projects {
+        width: 60%;
+        margin: 1rem auto;
+    }
 }
 
 
